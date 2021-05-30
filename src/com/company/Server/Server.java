@@ -17,7 +17,6 @@ public class Server {
             Socket client = serverSocket.accept(); //waiting for client
             System.out.println("Client accepted!");
 
-
             ClientHandler clientHandler = new ClientHandler(client);
             Thread thread = new Thread(clientHandler);
             thread.start();
